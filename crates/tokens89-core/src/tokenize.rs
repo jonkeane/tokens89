@@ -1278,10 +1278,8 @@ fn patch_structured_else(bytes: &mut [u8], instructions: &[(usize, u8)]) -> Resu
                     return Err(Error::Malformed("EndTry without matching Try"));
                 }
             }
-            0x10 => {
-                if stack.pop() != Some(0x3b) {
-                    return Err(Error::Malformed("EndIf without matching If Then"));
-                }
+            0x10 if stack.pop() != Some(0x3b) => {
+                return Err(Error::Malformed("EndIf without matching If Then"));
             }
             _ => {}
         }
