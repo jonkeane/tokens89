@@ -1,0 +1,8 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc 2a99f372d24342692ad06892ce181697d475d5bcded30d8b5e275bfa2bdc7e31 # shrinks to expr = Binary(Binary(Number(0), "+", Number(0)), "+", Number(0))
+cc 0a8fcd8dda5b24852ea61b6b17942726c05da97afb1623bc941b17333af62424 # shrinks to folder = "a", name = "a", kind = Unknown(10), payload = []

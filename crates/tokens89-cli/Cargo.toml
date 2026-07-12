@@ -1,0 +1,18 @@
+[package]
+name = "tokens89-cli"
+version.workspace = true
+edition.workspace = true
+license-file.workspace = true
+readme.workspace = true
+description.workspace = true
+documentation = "https://docs.rs/tokens89-cli"
+
+[[bin]]
+name = "tokens89"
+path = "src/main.rs"
+
+[dependencies]
+tokens89-core = { path = "../tokens89-core", version = "0.1.0" }
+
+[lints]
+workspace = true

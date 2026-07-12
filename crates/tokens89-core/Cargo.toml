@@ -1,0 +1,21 @@
+[package]
+name = "tokens89-core"
+version.workspace = true
+edition.workspace = true
+license-file.workspace = true
+readme.workspace = true
+description.workspace = true
+documentation = "https://docs.rs/tokens89-core"
+
+[lib]
+name = "tokens89_core"
+
+[lints]
+workspace = true
+
+[dev-dependencies]
+proptest = "1"
+
+[[bench]]
+name = "corpus"
+harness = false

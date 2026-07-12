@@ -1,0 +1,24 @@
+#compdef tokens89
+
+local -a commands
+commands=(
+  'encode:encode UTF-8 source into a TI variable file'
+  'decode:decode a TI variable file into UTF-8 source'
+  'inspect:display TI variable metadata'
+  'tokenize:convert source to raw tokens'
+  'detokenize:convert raw tokens to source'
+  'verify:verify a TI variable container'
+)
+_arguments '1:command:->command' '*:argument:->args'
+case $state in
+  command) _describe command commands ;;
+  args)
+    case $words[2] in
+      encode) _arguments '-o[output file]:file:_files' '--output[output file]:file:_files' '--name[calculator name]:name' '--folder[calculator folder]:folder' '--type[variable type]:type' '--no-tokenize' '--force' '1:source:_files' ;;
+      decode) _arguments '-o[output file]:file:_files' '--output[output file]:file:_files' '--force' '1:TI file:_files' ;;
+      tokenize) _arguments '-o[output file]:file:_files' '--output[output file]:file:_files' '--type[variable type]:type' '--hex' '--no-tokenize' '--force' '1:source:_files' ;;
+      detokenize) _arguments '-o[output file]:file:_files' '--output[output file]:file:_files' '--hex' '--force' '1:tokens:_files' ;;
+      inspect|verify) _arguments '1:TI file:_files' ;;
+    esac
+  ;;
+esac

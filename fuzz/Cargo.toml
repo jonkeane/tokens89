@@ -1,0 +1,64 @@
+[package]
+name = "tokens89-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+tokens89-core = { path = "../crates/tokens89-core" }
+
+[[bin]]
+name = "tifile"
+path = "fuzz_targets/tifile.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "group"
+path = "fuzz_targets/group.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "detokenize"
+path = "fuzz_targets/detokenize.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "graphlink"
+path = "fuzz_targets/graphlink.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "charset"
+path = "fuzz_targets/charset.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "tokenize"
+path = "fuzz_targets/tokenize.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "corpus_roundtrip"
+path = "fuzz_targets/corpus_roundtrip.rs"
+test = false
+doc = false
+bench = false
+
+[workspace]
+members = ["."]

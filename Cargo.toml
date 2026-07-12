@@ -1,0 +1,13 @@
+[workspace]
+members = ["crates/tokens89-core", "crates/tokens89-cli"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license-file = "lgpl.txt"
+readme = "README.md"
+description = "TI-89/92+/Voyage 200 tokenized variable converter"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
