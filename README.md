@@ -27,4 +27,4 @@ The port is distributed under the same GNU Lesser General Public License,
 version 2.1 or later. The complete license is in `lgpl.txt`.
 
 ## Getting tokenized files onto a TI calculator (without TI Connect)
-[tilp2[(https://github.com/debrouxl/tilp_and_gfm/tree/master/tilp/trunk) which depends on the [tilibs](https://github.com/debrouxl/tilibs/) provides a CLI (and GUI too) that can interface with TI calculators of USB and link cables without TI Connect
+[tilp2](https://github.com/debrouxl/tilp_and_gfm/tree/master/tilp/trunk) which depends on the [tilibs](https://github.com/debrouxl/tilibs/) provides a CLI (and GUI too) that can interface with TI calculators of USB and link cables without TI Connect
